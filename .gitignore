@@ -2,4 +2,6 @@
 node_modules
 
 # Build tool
-mix-manifest.json
+.rts2_cache_cjs
+.rts2_cache_es
+.rts2_cache_umd
