@@ -1,5 +1,5 @@
 {
-  "name": "isvisible",
+  "name": "@tia_keiron/isvisible",
   "version": "1.0.0",
   "source": "src/isVisible.ts",
   "main": "dist/isVisible.js",
