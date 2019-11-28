@@ -1,18 +1,18 @@
 {
-  "name": "@tia_keiron/isvisible",
+  "name": "visiblee",
   "version": "1.0.0",
-  "source": "src/isVisible.ts",
-  "main": "dist/isVisible.js",
-  "module": "dist/isVisible.mjs",
-  "umd:main": "dist/isVisible.umd.js",
-  "typings": "dist/isVisible.d.ts",
+  "source": "src/visiblee.ts",
+  "main": "dist/visiblee.js",
+  "module": "dist/visiblee.mjs",
+  "umd:main": "dist/visiblee.umd.js",
+  "typings": "dist/visiblee.d.ts",
   "author": {
     "name": "Keiron Lowe",
     "url": "https://keironlowe.co.uk"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/KeironLowe/isVisible"
+    "url": "https://github.com/KeironLowe/visiblee"
   },
   "license": "MIT",
   "scripts": {
@@ -20,7 +20,7 @@
     "watch": "microbundle watch"
   },
   "bugs": {
-    "url": "https://github.com/KeironLowe/isVisible/issues"
+    "url": "https://github.com/KeironLowe/visiblee/issues"
   },
   "devDependencies": {
     "eslint": "^6.6.0",

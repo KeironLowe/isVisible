@@ -1,26 +1,26 @@
 /// <reference path="./types.ts"/>
 
-export class IsVisible {
+export class Visiblee {
 
 
     /**
      * The elements to watch.
      *
      * @private
-     * @type {Array<IsVisible.Entry>}
-     * @memberof IsVisible
+     * @type {Array<Visiblee.Entry>}
+     * @memberof Visiblee
      */
-    private watchList: Array<IsVisible.Entry> = [];
+    private watchList: Array<Visiblee.Entry> = [];
 
 
     /**
-     * Creates an instance of IsVisible.
+     * Creates an instance of Visiblee.
      * 
      * @private
-     * @memberof IsVisible
+     * @memberof Visiblee
      */
     private constructor() {
-        if(window.isVisible) { return; }
+        if(window.visiblee) { return; }
 
         window.addEventListener('scroll', () => {
             this.watchList.forEach(entry => {
@@ -28,7 +28,7 @@ export class IsVisible {
                     entry.callback(entry);
 
                     if(entry.removeOnceVisible) {
-                        IsVisible.unwatch(entry.element);
+                        Visiblee.unwatch(entry.element);
                     }
                 }
             });
@@ -41,12 +41,12 @@ export class IsVisible {
      *
      * @static
      * @param {(Array<HTMLElement> | HTMLElement)} elements
-     * @param {(entry:IsVisible.Entry) => void} callback
+     * @param {(entry:Visiblee.Entry) => void} callback
      * @param {number} [triggerPoint=0.5]
      * @param {boolean} [removeOnceVisible=true]
-     * @memberof IsVisible
+     * @memberof Visiblee
      */
-    public static watch(elements: Array<HTMLElement> | HTMLElement, callback: (entry: IsVisible.Entry) => void, triggerPoint = 0.5, removeOnceVisible = true): void {
+    public static watch(elements: Array<HTMLElement> | HTMLElement, callback: (entry: Visiblee.Entry) => void, triggerPoint = 0.5, removeOnceVisible = true): void {
         const instance = this.getInstance();
         
         if(Array.isArray(elements)) {
@@ -63,7 +63,7 @@ export class IsVisible {
      * Removes the element from the watch list
      *
      * @param {HTMLElement} element
-     * @memberof IsVisible
+     * @memberof Visiblee
      */
     public static unwatch(element: HTMLElement): void {
         const instance = this.getInstance();
@@ -82,7 +82,7 @@ export class IsVisible {
      * @param {HTMLElement} element
      * @param {number} [triggerPoint=0.5]
      * @returns {boolean}
-     * @memberof IsVisible
+     * @memberof Visiblee
      */
     public static check(element: HTMLElement, triggerPoint = 0.5): boolean {
         const instance = this.getInstance();
@@ -97,16 +97,16 @@ export class IsVisible {
 
 
     /**
-     * Binds an instance of IsVisible to the window if it isn't already.
+     * Binds an instance of Visiblee to the window if it isn't already.
      *
      * @static
-     * @memberof IsVisible
+     * @memberof Visiblee
      */
-    public static getInstance(): IsVisible {
-        if(!window.isVisible) {
-            window.isVisible = new IsVisible();
+    public static getInstance(): Visiblee {
+        if(!window.visiblee) {
+            window.visiblee = new Visiblee();
         }
-        return window.isVisible;
+        return window.visiblee;
     }
 
 
@@ -114,11 +114,11 @@ export class IsVisible {
      * Returns true if the entry is currently visible.
      *
      * @private
-     * @param {IsVisible.Entry} entry
+     * @param {Visiblee.Entry} entry
      * @returns {boolean}
-     * @memberof IsVisible
+     * @memberof Visiblee
      */
-    private isVisible(entry: IsVisible.Entry): boolean {
+    private isVisible(entry: Visiblee.Entry): boolean {
         const visibilityOffset = (window.innerHeight / (100 / (100 - (entry.triggerPoint * 100))));
         return (window.scrollY || window.pageYOffset) >= entry.element.offsetTop - visibilityOffset;
     }

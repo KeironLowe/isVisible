@@ -1,8 +1,8 @@
 interface Window {
-    isVisible: import('./isVisible').IsVisible;
+    visiblee: import('./visiblee').Visiblee;
 }
 
-declare namespace IsVisible {
+declare namespace Visiblee {
 
     export interface Entry {
         element: HTMLElement;
