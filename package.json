@@ -1,6 +1,17 @@
 {
     "name": "isvisible",
     "version": "1.0.0",
+    "main": "dist/isVisible.js",
+    "typings": "src/index.d.ts",
+    "author": {
+      "name": "Keiron Lowe",
+      "url": "https://keironlowe.co.uk"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/KeironLowe/isVisible"
+    },
+    "license": "MIT",
     "scripts": {
       "dev": "npm run development",
       "development": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -12,7 +23,6 @@
     "bugs": {
       "url": "https://github.com/KeironLowe/isVisible/issues"
     },
-    "homepage": "https://github.com/KeironLowe/isVisible",
     "devDependencies": {
       "@typescript-eslint/eslint-plugin": "^2.6.1",
       "@typescript-eslint/parser": "^2.6.1",
