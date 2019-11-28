@@ -1,0 +1,27 @@
+{
+    "exclude": [
+        "node_modules",
+        "vendor"
+    ],
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "sourceMap": true,
+        "removeComments": true,
+    
+        /* Strict Type-Checking Options */
+        "strict": true,
+    
+        /* Additional Checks */
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+    
+        /* Module Resolution Options */
+        "esModuleInterop": true,
+    
+        /* Advanced Options */
+        "forceConsistentCasingInFileNames": true
+    }
+}

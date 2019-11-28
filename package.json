@@ -1,0 +1,26 @@
+{
+    "name": "isvisible",
+    "version": "1.0.0",
+    "scripts": {
+      "dev": "npm run development",
+      "development": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+      "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+      "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+      "prod": "npm run production",
+      "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "bugs": {
+      "url": "https://github.com/KeironLowe/isVisible/issues"
+    },
+    "homepage": "https://github.com/KeironLowe/isVisible",
+    "devDependencies": {
+      "@typescript-eslint/eslint-plugin": "^2.6.1",
+      "@typescript-eslint/parser": "^2.6.1",
+      "eslint": "^6.6.0",
+      "eslint-loader": "^3.0.2",
+      "laravel-mix": "^4.0.15",
+      "ts-loader": "^6.2.1",
+      "typescript": "^3.7.2"
+    }
+  }
+  
