@@ -1,3 +1,4 @@
+/// <reference path="types.d.ts" />
 export declare class IsVisible {
     private watchList;
     private constructor();

@@ -1,3 +1,5 @@
+/// <reference path="./types.ts"/>
+
 export class IsVisible {
 
 

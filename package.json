@@ -5,7 +5,7 @@
   "main": "dist/isVisible.js",
   "module": "dist/isVisible.mjs",
   "umd:main": "dist/isVisible.umd.js",
-  "typings": "dist/index.d.ts",
+  "typings": "dist/isVisible.d.ts",
   "author": {
     "name": "Keiron Lowe",
     "url": "https://keironlowe.co.uk"
